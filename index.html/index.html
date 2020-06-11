@@ -1,0 +1,355 @@
+<html>
+<head><title>
+	Jaya Sisters
+</title>
+<meta charset="UTF-8">
+  <meta name="description" content="Free Web tutorials">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="author" content="John Doe">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+var shape = setInterval(function() {
+    var r_num = Math.floor(Math.random() * 1) + 1;
+    var r_size = Math.floor(Math.random() * 15) + 10;
+    var r_left = Math.floor(Math.random() * 100) + 1;
+    var r_bg = Math.floor(Math.random() * 2) + 100;
+    var r_time = Math.floor(Math.random() * 5) + 5;
+
+    $('.blow_hear').append("<div class='hear' style='width:" + r_size + "px;height:" + r_size + "px;left:" + r_left + "%;background:#fff;-webkit-animation:shape " + r_time + "s ease;-moz-animation:shape " + r_time + "s ease;-ms-animation:shape " + r_time + "s ease;animation:shape " + r_time + "s ease'></div>");
+
+    $('.blow_hear').append("<div class='hear' style='width:" + (r_size - 10) + "px;height:" + (r_size - 10) + "px;left:" + (r_left + r_num) + "%;background:#669999;-webkit-animation:shape " + (r_time + 25) + "s ease;-moz-animation:shape " + (r_time + 25) + "s ease;-ms-animation:shape " + (r_time + 5) + "s ease;animation:shape " + (r_time + 5) + "s ease'></div>");
+
+    $('.hear').each(function() {
+        var top = $(this).css("top").replace(/[^-\d\.]/g, '');
+        var width = $(this).css("width").replace(/[^-\d\.]/g, '');
+        if (top <= -200 || width >= 45) {
+            $(this).detach();
+        }
+    });
+}, 500);
+    </script>  </head>
+<style >
+    @import url('https://fonts.googleapis.com/css?family=Almendra+SC');
+
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+body {
+  background:#ccffff; 
+}
+.cont{
+    display:flex;
+    align-items:center;
+    flex-direction:column;
+    width:100px;
+    position:relative;
+    left:35%;
+    top:150px;
+    animation:move 4s forwards;
+}
+@keyframes move{
+    100%{
+        top:0px;
+    }
+}
+.ear{
+    height:45px;
+    width:10px;
+    left:10px;
+    background:pink;
+    border:#fff solid 4px;
+    border-radius:50% 50% 0 0;
+    margin-right:7px;
+    transform:rotate(10deg);
+}
+.ears{
+    display:flex;
+}
+.head{
+    position:relative;
+    top:-10px;
+    background:#fff;
+    border-radius:35% 38% 50% 50%;
+    height:80px;
+    width:80px;
+}
+.face{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+.eyes{
+    display:flex;
+    position:relative;
+    top:12px;
+    width:35px;
+    justify-content:space-around;
+}
+.eye{
+    background:#000;
+    border-radius:50%;
+    height:10px;
+    width:6px;
+
+}
+.circle{
+background:#eee;
+border-radius:50%;
+height:4px;
+width:4px;
+top:30px;
+    
+}
+.nose{
+    height:3px;
+    width:7px;
+    position:relative;
+    top:20px;
+    background:pink;
+    border-radius:60% 60% 30% 30%;
+}
+.mouth{
+    position:relative;
+    top:25px;
+    font-size:10px;
+    height:15px;
+    width:10px;
+    border-radius: 0 20px 20px 0;
+    background:#666;
+    transform:rotate(90deg);
+}
+.hands{
+    display:flex;
+    position:relative;
+    top:-5px;
+    left:7px;
+    justify-content:space-around;
+    width:30px;
+}
+.hand{
+    height:2px;
+    width:30px;
+    border:10px solid #c2c2d6;
+    border-top:none;
+    border-radius: 0 0 40% 40%;
+    box-shadow:0 0 0 5px #fff;
+    z-index:1;
+    margin-top:-38%;
+    margin-right:55px;
+    margin-left:40px;
+}
+.papaer{
+top:-6px;
+position:absolute ;
+    width:200px;
+    height:90px;
+    font-size:30px;
+    background:#b35900;
+    box-shadow:
+   0 0 0 4px #804000,0 0 0 6px #4d2600,0 0 0 9px #663300;
+               
+}
+h1{
+    font-size:25px;
+    text-align:center;
+    color:wheat;
+    font-family:Almendra SC;
+}
+.container{
+    top:0;
+    left:50%;
+    right:0;
+    bottom:0;
+    width:100%;
+    border:10px solid #669999;
+}
+.text{
+    width:95%;
+    height:250px;
+    position:absolute;
+    z-index:3;
+    margin-top:25%;
+    border:1px solid #669999;
+    background-color:#fff;
+    border-radius:5px;
+    font-family:Lobster;
+    font-size:30px;
+}
+h2{
+    background:#669999;
+    margin-top:-1%;
+    border-radius:5px;
+    color:#fff;
+    font-size:25px;
+    font-family:Almendra SC;
+    text-align:center;
+    }
+   
+.hear{
+    position: absolute;
+    top: -30%;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -m-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    z-index:5;
+ }
+
+.hear:before {
+    position: absolute;
+    top: -50%;
+    left: 0;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    border-radius: 100%;
+}
+
+.hear:after {
+    position: absolute;
+    top: 0;
+    right: -50%;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    border-radius: 100%;
+}
+
+@-webkit-keyframes shape {
+  0%{
+  top:5%;
+  }
+}
+@-webkit-keyframes shape{
+    40%{
+        top:50%;
+    }
+}
+@-moz-keyframes shape {
+  0%{
+  top:30%;
+  }
+}
+@-ms-keyframes shape {
+  100%{
+  top:60%;
+  }
+}
+@keyframes shape{
+    70%{
+        top:70%;
+    }
+    50%{
+        top:80%;
+    }
+}
+@keyframes shape {
+  0%{
+  top:100%;
+  opacity:0.3;
+  }
+} 
+
+	body{
+		 width:100%;
+  height: 100px;
+  background-color: red;
+  animation-name: example;
+  animation-duration: 15s;
+  text-align: center;
+  text-shadow: inherit;
+	}
+	@keyframes example {
+  0%   {background-color: orange;}
+  10%  {background-color: #c4f589;}
+  20%  {background-color: pink;}
+  30%  {background-color: gray;}
+  40% {background-color: yellow;}
+  50%   {background-color:#f58f71;}
+  60%  {background-color: tomato;}
+  70%  {background-color: #c98761;}
+  80%  {background-color: #c588eb;}
+  90%  {background-color: #00ffff;}
+  100% {background-color:  #f0c7d5;}
+}
+
+</style>
+
+
+<body style="background: lightblue" >
+    <form action="index.html" method="post">
+    <script>
+var shape = setInterval(function() {
+    var r_num = Math.floor(Math.random() * 1) + 1;
+    var r_size = Math.floor(Math.random() * 15) + 10;
+    var r_left = Math.floor(Math.random() * 100) + 1;
+    var r_bg = Math.floor(Math.random() * 2) + 100;
+    var r_time = Math.floor(Math.random() * 5) + 5;
+
+    $('.blow_hear').append("<div class='hear' style='width:" + r_size + "px;height:" + r_size + "px;left:" + r_left + "%;background:#fff;-webkit-animation:shape " + r_time + "s ease;-moz-animation:shape " + r_time + "s ease;-ms-animation:shape " + r_time + "s ease;animation:shape " + r_time + "s ease'></div>");
+
+    $('.blow_hear').append("<div class='hear' style='width:" + (r_size - 10) + "px;height:" + (r_size - 10) + "px;left:" + (r_left + r_num) + "%;background:#669999;-webkit-animation:shape " + (r_time + 25) + "s ease;-moz-animation:shape " + (r_time + 25) + "s ease;-ms-animation:shape " + (r_time + 5) + "s ease;animation:shape " + (r_time + 5) + "s ease'></div>");
+
+    $('.hear').each(function() {
+        var top = $(this).css("top").replace(/[^-\d\.]/g, '');
+        var width = $(this).css("width").replace(/[^-\d\.]/g, '');
+        if (top <= -200 || width >= 45) {
+            $(this).detach();
+        }
+    });
+}, 500);
+    </script> 
+	<h1 style="color: blue; text-shadow: blue -1px -2px 0.5em;"><marquee>Hello guyzz!!</marquee></h1>
+<h2 style="color: black;text-align: top; text-shadow:5px 2px 4px orange ;text-orientation:left"><br><i>Thank u all for ur hearty wishes! </h2></i>
+
+
+               <div id="header-plugin"></div>
+<div class="blow_hear"></div>
+       <div class="cont">
+           <div class="ears">
+               <div class="ear"></div>
+               <div class="ear"></div>
+                </div>
+           <div class="head">
+               <div class="face">
+                   <div class="eyes">
+                       <div class="eye">
+                           <div class="circle"></div>
+                       </div>
+                       <div class="eye">  
+                        <div class="circle"></div></div>
+                   </div>
+                   <div class="nose"></div>
+                   <div class="mouth"></div>
+               </div>
+           </div>
+           <div class="hands">
+           <div class="papaer"> 
+           <h1>Welcome u all!!!</h1>
+           <h1>Click d button!</h1></div>
+               <div class="hand"></div>
+               <div class="hand"></div>
+          </div>
+           
+       </div>
+
+       <br>
+       <br>
+       <br>
+       <br>
+       
+
+<br>
+<br>
+<button type="submit">Click me here</button>
+
+<!--<button style="color: maroon ; height: 20px text-align: center;" onclick="document.getElementById('sang').innerHTML='From the bottom of my heart,I thank u all my buddies for the astonishing birthday wishes,gifts,laughs,weird jokes and everything on just another day in ecstasy...It means a lot to me...Its a beautiful day! Ur aweful wishes really made me bloom...Itz a great remainder of how thankful I am for all the beauty I have in my life.Thanks for being a part of this great feeling!I can truely say how blessed I am to have such great people in my life!I woke up this morning with too many text messages nd calls from all of u for my special day!Thank u so much for being a vital part of my life!!!'"><b>Click me </b></button>-->
+<h1 style="color:red;
+background: yellow" id="sang"></h1>
+
+
+</body>
+</html>

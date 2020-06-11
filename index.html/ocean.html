@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+
+<!--Life is like a ocean💦.It can be calm and rigid but in the end it is always beautiful🌺.
+
+No water💦
+No life😰
+so let's save ocean.
+
+happy world ocean day😍
+
+coded by-vanshika singh💕 -->
+
+<html>
+
+    <head>
+        <title>World ocean day</title>
+<meta charset="UTF-8">
+  <meta name="description" content="Free Web tutorials">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="author" content="John Doe">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <style>
+        *{
+    margin:0px;
+    padding:0px;
+}
+
+
+body {
+background-image:url("2.png");
+    
+}
+.star{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+.card{
+    width:300px;
+    height:400px;
+    
+    
+}
+.front,.back{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    backface-visibility:hidden;
+    position:absolute;
+    transition:transform .6s linear;
+}
+.front{
+    
+    transform:perspective(600px) rotateY(0deg);
+}
+.back{
+    background:#f1f1f1;
+    transform:perspective(600px) rotateY(180deg);
+}
+.text{
+    text-align:center;
+    margin-top:1em;
+    font-family:cursive;
+    
+    
+}
+.card:hover> .front{
+ transform:perspective(600px)  rotateY(-180deg);   
+}
+.card:hover> .back{
+ transform:perspective(600px) rotateY(0deg);   
+}
+h2:before{
+    content:'';
+    position:absolute;
+    left:120;
+    width:70%;
+    height:9%;
+    background:linear-gradient(90deg, transparent 0%,#000 5%, #000 1000%);
+    animation:animate 5.5s linear forwards;
+                
+}
+@keyframes animate{
+    0%{
+        left:110%;
+    }
+    100%{
+        left:-80%;
+    }
+    
+    }
+
+
+h2 span{
+    color:#ff022c;    
+}
+.earth{
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    margin:auto;
+    width:200px;
+    height:200px;
+background-image:url("https://i.ibb.co/5hHCxxj/images-2020-06-08-T121057-277.jpg");
+   border-radius:50%;
+   backcground-size:cover;
+   box-shadow:inset -5px 0px 30px 5px #000;
+   animation:spin 15s linear infinite ;
+}
+@keyframes spin{
+   100%{
+       background-position:100%;
+    }
+}
+    </style>
+    <body>
+    <div class="card star">
+        <div style="background: pink;padding: 20px 15px 20px 15px;border: 2px solid red" class="front">
+        <h3 style="text-align: center;"><b style="color: green"><i> TOUCH HERE!!!</i></b><br>From the bottom of my heart,I thank u all my buddies for the astonishing birthday <b style="color: blue">wishes,gifts,laughs,weird jokes and everything on just another day in ecstasy</b>...It means a lot to me...Its a beautiful day! Ur aweful wishes really made me bloom...Itz a great remainder of how thankful I am for all the beauty I have in my life.<b style="color: blue">Thanks for being a part of this great feeling!</b>I can truely say how blessed I am to have such great people in my life!I woke up this morning with too many text messages nd calls from all of u for my special day!<b style="color: blue">Thank u so much for being a vital part of my life!!!</b><br><span style="text-align:left;"> -JAYA SISTERS &#10024;</span></h3>
+        </div>
+        <div class="back">
+            <div class="text">
+            
+                <h2 style="text-align:center"><span>T</span>hank<br> <span>Y</span>ou <br><span>A</span>ll<br> <span>G</span>uyzz <br><span>F</span>or<br> <span>Y</span>our <br><span>P</span>riceless <br> <span>N</span>d <br> <span>M</span>agnificent<br> <span>W</span>ishes!!! &#128151; <br><span style="text-align:left;"> -JAYA SISTERS &#10024;</span></h2>
+            </div>
+          
+    </div>
+    </div>
+   <!-- <div><br>
+        <br>
+        <br><br>
+        <br><br>
+        <br><br>
+        <br><br>
+        <br><br>
+        <br>v<br>
+        <br><br>
+        <br><br>
+        <br><br><br>
+        <br><br>
+        <br>v<br>
+        <br><br>
+        <br><br>
+    <footer style="float: bottom" ><p style="background: gray;text-align: center;float: bottom;height: 100%">Copyright &copy; 2020 All rights reserved|This is made by <span style="color: blue"> Jayasree T</span></p></footer>
+    </div> -->   
+    </body>
+</html>
